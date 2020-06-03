@@ -1,0 +1,2 @@
+//Inicializar servidor php (testar no chrome)
+php -S localhost:8000
