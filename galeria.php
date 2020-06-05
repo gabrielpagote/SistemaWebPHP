@@ -1,27 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
-  <title>UranioCine</title>
-</head>
+<?php include "cabecalho.php"?>
 
 <body>
+
+  <!-- Cabeçalho-->
   <nav class="nav-extended purple lighten-2">
     <div class="nav-wrapper">
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="galeria.php">Galeria</a></li>
-        <li><a href="cadastrar.php">Cadastrar</a></li>
+      <ul id="nav-mobile" class="right">
+      <li class="active">
+          <a href="galeria.php">Galeria</a></li>
+        <li>
+          <a href="cadastrar.php">Cadastrar</a></li>
       </ul>
     </div>
     <div class="nav-header center">
@@ -30,13 +18,13 @@
     <div class="nav-content">
       <ul class="tabs tabs-transparent purple darken-1">
         <li class="tab"><a href="#test1">Todos</a></li>
-        <li class="tab"><a class="active" href="#test2">Assistidos</a></li>
+        <li class="tab"><a href="#test2">Assistidos</a></li>
         <li class="tab"><a href="#test3">Favoritos</a></li>
       </ul>
     </div>
   </nav>
 
-
+  <!-- Posters de filmes-->
   <div class="row">
     <div class="col s3">
       <div class="card hoverable">
@@ -54,6 +42,7 @@
         </div>
       </div>
     </div>
+
     <div class="col s3">
       <div class="card hoverable">
         <div class="card-image">
@@ -62,10 +51,44 @@
             <i class="material-icons">favorite_border</i></a>
         </div>
         <div class="card-content">
-          <p class="valign-wrapper"><i class="material-icons amber-text">star</i> 9,2</p>
+          <p class="valign-wrapper"><i class="material-icons amber-text">star</i> 6,2</p>
           <span class="card-title">AD Astra</span>
           <p>Um homem viaja pelo interior de um sistema solar sem lei para encontrar seu pai desaparecido
             - um cientista renegado que representa uma ameaça à humanidade.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s3">
+      <div class="card hoverable">
+        <div class="card-image">
+          <img src="https://image.tmdb.org/t/p/w400/nfiwuRN59pcw3ETIDTThNOm2vai.jpg">
+          <a class="btn-floating halfway-fab waves-effect waves-light red">
+            <i class="material-icons">favorite_border</i></a>
+        </div>
+        <div class="card-content">
+          <p class="valign-wrapper"><i class="material-icons amber-text">star</i> 9,9</p>
+          <span class="card-title">Viúva Negra</span>
+          <p>Em Viúva Negra, após seu nascimento, Natasha Romanoff (Scarlett Johansson) é dada à KGB,
+            que a prepara para se tornar sua agente definitiva.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s3">
+      <div class="card hoverable">
+        <div class="card-image">
+          <img src="https://image.tmdb.org/t/p/w400/iAoopZZ0tNFFYnOIsOr1wpRbdx7.jpg">
+          <a class="btn-floating halfway-fab waves-effect waves-light red">
+            <i class="material-icons">favorite_border</i></a>
+        </div>
+        <div class="card-content">
+          <p class="valign-wrapper"><i class="material-icons amber-text">star</i> 8,0</p>
+          <span class="card-title">Mulan</span>
+          <p>Hua Mulan é a espirituosa e determinada filha mais velha de um honrado guerreiro.
+            Quando o Imperador da China emite um decreto que um homem de cada família deve servir
+            no exército imperial, Mulan decide tomar o lugar de seu pai, que está doente.</p>
         </div>
       </div>
     </div>
