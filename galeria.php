@@ -3,23 +3,15 @@
 <?php
 
 $filme1 = [
-  "titulo" => "Vingadores: Ultimato",
-  "nota" => "9.6",
-  "sinopse" => "Após Thanos eliminar metade das criaturas vivas, os Vingadores têm de lidar com a perda de amigos e entes queridos.
-    Com Tony Stark vagando perdido no espaço sem água e comida,
-    Steve Rogers e Natasha Romanov lideram a resistência contra o titã louco",
-  "poster" => "https://image.tmdb.org/t/p/w400/mI1Ktgg7LuhwAhUgke4rHUxlDUr.jpg",
+  "titulo" => "Bootstrap",
+  "nota" => "10",
+  "sinopse" => "Quando um escritor em dificuldades recebe uma máquina do tempo
+   por um misterioso homem encapuzado, ele faz uma jornada para encontrar a identidade do homem
+    e o significado do destino.",
+  "poster" => "https://image.tmdb.org/t/p/w400/8xvQsbAT0TJjKmUH8SOtnSl8nRj.jpg",
 ];
 
 $filme2 = [
-  "titulo" => "AD Astra",
-  "nota" => "6.5",
-  "sinopse" => "Um homem viaja pelo interior de um sistema solar sem lei para encontrar seu pai desaparecido
-    - um cientista renegado que representa uma ameaça à humanidade.",
-  "poster" => "https://image.tmdb.org/t/p/w400/dJ3VPQTg2gST26IKIk75TNHViB0.jpg",
-];
-
-$filme3 = [
   "titulo" => "Viúva Negra",
   "nota" => "9.1",
   "sinopse" => "Em Viúva Negra, após seu nascimento, Natasha Romanoff (Scarlett Johansson) é dada à KGB,
@@ -27,14 +19,24 @@ $filme3 = [
   "poster" => "https://image.tmdb.org/t/p/w400/nfiwuRN59pcw3ETIDTThNOm2vai.jpg",
 ];
 
-$filme4 = [
-  "titulo" => "Mulan",
-  "nota" => "8.2",
-  "sinopse" => "Hua Mulan é a espirituosa e determinada filha mais velha de um honrado guerreiro.
-    Quando o Imperador da China emite um decreto que um homem de cada família deve servir
-    no exército imperial, Mulan decide tomar o lugar de seu pai, que está doente.",
-  "poster" => "https://image.tmdb.org/t/p/w400/iAoopZZ0tNFFYnOIsOr1wpRbdx7.jpg",
+$filme3 = [
+  "titulo" => "1917",
+  "nota" => "7.9",
+  "sinopse" => "Os cabos Schofield e Blake são jovens soldados britânicos
+   durante a Primeira Guerra Mundial. Quando eles são encarregados de uma missão aparentemente impossível.",
+  "poster" => "https://image.tmdb.org/t/p/w400/8KkyXE7Hd9MPOOkORxkMM6SUXAB.jpg",
 ];
+
+$filme4 = [
+  "titulo" => "Resgate",
+  "nota" => "7.4",
+  "sinopse" => "Em Bangladesh, o mercenário Tyler Rake luta para sobreviver durante a missão
+   para resgatar o filho de um chefão do crime.",
+  "poster" => "https://image.tmdb.org/t/p/w400/zxahunlqvMPWzUBd1XSRsGawdS9.jpg",
+];
+
+
+
 
 $filmes = [$filme1, $filme2, $filme3, $filme4];
 
@@ -43,7 +45,7 @@ $filmes = [$filme1, $filme2, $filme3, $filme4];
 <body>
 
   <!-- Cabeçalho-->
-  <nav class="nav-extended purple lighten-2">
+  <nav class="nav-extended red lighten-2">
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="right">
         <li class="active">
@@ -53,10 +55,10 @@ $filmes = [$filme1, $filme2, $filme3, $filme4];
       </ul>
     </div>
     <div class="nav-header center">
-      <h1> URANIOCINE </h1>
+      <h1> UranioCINE </h1>
     </div>
     <div class="nav-content">
-      <ul class="tabs tabs-transparent purple darken-1">
+      <ul class="tabs tabs-transparent red darken-1">
         <li class="tab"><a href="#test1">Todos</a></li>
         <li class="tab"><a href="#test2">Assistidos</a></li>
         <li class="tab"><a href="#test3">Favoritos</a></li>
