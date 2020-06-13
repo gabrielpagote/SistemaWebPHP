@@ -2,6 +2,11 @@
 
 <?php
 
+$bd = new SQLite3("filmes.db");
+$sql = "SELECT * FROM filmes";
+$filmes = $bd->query($sql);
+
+
 $filme1 = [
   "titulo" => "Bootstrap",
   "nota" => "10",
@@ -38,7 +43,7 @@ $filme4 = [
 
 
 
-$filmes = [$filme1, $filme2, $filme3, $filme4];
+//$filmes = [$filme1, $filme2, $filme3, $filme4];
 
 ?>
 
@@ -70,7 +75,7 @@ $filmes = [$filme1, $filme2, $filme3, $filme4];
 
   <div class="row">
 
-    <?php foreach ($filmes as $filme) : ?>
+    <?php  while ($filme = $filmes-> fetchArray()) :?>
 
       <div class="col s3">
         <div class="card hoverable">
@@ -87,7 +92,7 @@ $filmes = [$filme1, $filme2, $filme3, $filme4];
           </div>
         </div>
       </div>
-    <?php endforeach ?>
+    <?php endwhile?>
   </div>
 
 </body>
