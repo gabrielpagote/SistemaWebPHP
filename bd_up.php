@@ -38,8 +38,8 @@ else
 echo "\nErro ao inserir filmes\n";    
 
     
-$sql = "INSERT INTO filmes (id, titulo, poster, sinopse, nota) VALUES (
-    1,
+$sql = "INSERT INTO filmes (titulo, poster, sinopse, nota) VALUES (
+    
     'Viúva Negra',
     'https://image.tmdb.org/t/p/w400/nfiwuRN59pcw3ETIDTThNOm2vai.jpg',
     'Em Viúva Negra, após seu nascimento, Natasha Romanoff (Scarlett Johansson) é dada à KGB,
@@ -52,5 +52,33 @@ if ($bd->exec($sql))
 else
     echo "\nErro ao inserir filmes\n";    
 
+    $sql = "INSERT INTO filmes (titulo, poster, sinopse, nota) VALUES (
     
+        '1917',
+        'https://image.tmdb.org/t/p/w400/8KkyXE7Hd9MPOOkORxkMM6SUXAB.jpg',
+        'Os cabos Schofield e Blake são jovens soldados britânicos
+         durante a Primeira Guerra Mundial. 
+         Quando eles são encarregados de uma missão aparentemente impossível.',
+        7.9
+)";
+
+if ($bd->exec($sql))
+    echo "\nFilmes inseridos com sucesso\n";
+else
+    echo "\nErro ao inserir filmes\n";  
+
+$sql = "INSERT INTO filmes (titulo, poster, sinopse, nota) VALUES (
+    
+    'Resgate',
+    'https://image.tmdb.org/t/p/w400/zxahunlqvMPWzUBd1XSRsGawdS9.jpg',
+    'Em Bangladesh, o mercenário Tyler Rake luta para sobreviver durante a missão
+     para resgatar o filho de um chefão do crime.',
+      7.4
+)";   
+ 
+ if ($bd->exec($sql))
+ echo "\nFilmes inseridos com sucesso\n";
+else
+ echo "\nErro ao inserir filmes\n";  
+
 ?>
