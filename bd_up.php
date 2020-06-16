@@ -32,6 +32,11 @@ $sql = "INSERT INTO filmes (id, titulo, poster, sinopse, nota) VALUES (
     10.0
 )";
 
+if ($bd->exec($sql))
+echo "\nFilmes inseridos com sucesso\n";
+else
+echo "\nErro ao inserir filmes\n";    
+
     
 $sql = "INSERT INTO filmes (id, titulo, poster, sinopse, nota) VALUES (
     1,
@@ -47,4 +52,5 @@ if ($bd->exec($sql))
 else
     echo "\nErro ao inserir filmes\n";    
 
+    
 ?>
