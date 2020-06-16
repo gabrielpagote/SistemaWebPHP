@@ -3,7 +3,7 @@
 <body>
 
     <!-- Cabeçalho-->
-    <nav class="nav-extended red lighten-2">
+    <nav class="nav-extended grey">
         <div class="nav-wrapper">
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li>
@@ -13,10 +13,10 @@
             </ul>
         </div>
         <div class="nav-header center">
-            <h1> URANIOCINE </h1>
+            <h1> Uranium Systems </h1>
         </div>
         <div class="nav-content">
-            <ul class="tabs tabs-transparent red darken-1">
+            <ul class="tabs tabs-transparent grey darken-1">
                 <li class="tab"><a href="#test1">Todos</a></li>
                 <li class="tab"><a href="#test2">Assistidos</a></li>
                 <li class="tab"><a href="#test3">Favoritos</a></li>
@@ -61,7 +61,7 @@
                     <!-- Input Capa do Filme -->
                     <form action="#">
                         <div class="file-field input-field">
-                            <div class="btn red lighten-2 black-text">
+                            <div class="btn grey darken-1 white-text">
                                 <span>Adicionar Capa</span>
                                 <input type="file">
                             </div>
@@ -74,7 +74,7 @@
 
                     <div class="card-action">
                         <a class="btn waves-effect waves-light grey" href="galeria.php">Cancelar</a>
-                        <a href="#" class="waves-effect waves-light btn red">Cadastrar</a>
+                        <a href="#" class="waves-effect waves-light btn grey">Cadastrar</a>
                     </div>
                 </div>
             </div>
