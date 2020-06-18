@@ -42,7 +42,7 @@ else
     $sql = "INSERT INTO opesis (titulo, poster, sinopse, nota) VALUES (
 
         'Parrot OS',
-        'https://s7p9r4y4.rocketcdn.me/wp-content/uploads/2020/02/Parrot-OS-4.8-beta-releases-640x367-1.png',
+        'https://pplware.sapo.pt/wp-content/uploads/2018/02/parrot_os_Intro.jpg',
         'Parrot (anteriormente Parrot Security OS) é uma distribuição baseada em Debian e orientada
          à segurança, com uma coleção de utilitários projetados para testes de penetração, análise forense
           de computadores, engenharia reversa, hacking, privacidade, anonimato e criptografia. O produto, 
