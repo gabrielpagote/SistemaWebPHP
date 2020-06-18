@@ -38,22 +38,6 @@ if ($bd->exec($sql))
 else
     echo "\nErro ao criar tabela de sistemas\n";
 
-
-    $sql = "INSERT INTO opesis (titulo, poster, sinopse, nota) VALUES (
-
-        'Parrot OS',
-        'https://pplware.sapo.pt/wp-content/uploads/2018/02/parrot_os_Intro.jpg',
-        'Parrot (anteriormente Parrot Security OS) é uma distribuição baseada em Debian e orientada
-         à segurança, com uma coleção de utilitários projetados para testes de penetração, análise forense
-          de computadores, engenharia reversa, hacking, privacidade, anonimato e criptografia. O produto, 
-          desenvolvido pela Frozenbox, vem com o MATE como o ambiente de desktop padrão.',
-        8.3
-    )";
-    
-    if ($bd->exec($sql))
-        echo "\nTabela de sistemas criada\n";
-    else
-        echo "\nErro ao criar tabela de sistemas\n";
     
     $sql = "INSERT INTO opesis (titulo, poster, sinopse, nota) VALUES (
         'Solus OS',
@@ -65,9 +49,26 @@ else
         totalmente integrada à pilha do GNOME. A distribuição está disponível apenas para
              computadores de 64 bits.
     ',
-        8.5
+        8.0
     )";
     
+    
+    if ($bd->exec($sql))
+        echo "\nTabela de sistemas criada\n";
+    else
+        echo "\nErro ao criar tabela de sistemas\n";
+       
+       $sql = "INSERT INTO opesis (titulo, poster, sinopse, nota) VALUES (
+
+            'Parrot OS',
+            'https://pplware.sapo.pt/wp-content/uploads/2018/02/parrot_os_Intro.jpg',
+            'Parrot (anteriormente Parrot Security OS) é uma distribuição baseada em Debian e orientada
+             à segurança, com uma coleção de utilitários projetados para testes de penetração, análise forense
+              de computadores, engenharia reversa, hacking, privacidade, anonimato e criptografia. O produto, 
+              desenvolvido pela Frozenbox, vem com o MATE como o ambiente de desktop padrão.',
+            8.6
+        )";
+        
     if ($bd->exec($sql))
         echo "\nTabela de sistemas criada\n";
     else
@@ -89,6 +90,3 @@ else
         echo "\nTabela de sistemas criada\n";
     else
         echo "\nErro ao criar tabela de sistemas\n";
-    
-
-?>
