@@ -30,7 +30,7 @@ $sql = "INSERT INTO opesis (titulo, poster, sinopse, nota) VALUES (
       uma licença livre e de código aberto e pretende estar na vanguarda de tais tecnologias.
       O Fedora tem uma reputação de se concentrar na inovação, integrando novas tecnologias desde o início
       e trabalhando em estreita colaboração com as comunidades Linux upstream.',
-    7.5
+    8.3
 )";
 
 if ($bd->exec($sql))
@@ -41,7 +41,7 @@ else
     
     $sql = "INSERT INTO opesis (titulo, poster, sinopse, nota) VALUES (
         'Solus OS',
-        'https://getsol.us/imgs/logo.jpg',
+        'https://cdn.pling.com/img/f/a/1/3/e3715c71faa5cfbcdfdfd76e9ddf2ea475b4.png',
         'Solus é uma distribuição Linux construída do zero. Ele usa uma versão
          bifurcada do gerenciador de pacotes PiSi, e um ambiente de desktop personalizado
         desenvolvido internamente. A área de trabalho do Budgie, que
@@ -49,7 +49,7 @@ else
         totalmente integrada à pilha do GNOME. A distribuição está disponível apenas para
              computadores de 64 bits.
     ',
-        8.0
+        8.5
     )";
     
     
@@ -66,7 +66,7 @@ else
              à segurança, com uma coleção de utilitários projetados para testes de penetração, análise forense
               de computadores, engenharia reversa, hacking, privacidade, anonimato e criptografia. O produto, 
               desenvolvido pela Frozenbox, vem com o MATE como o ambiente de desktop padrão.',
-            8.6
+            8.7
         )";
         
     if ($bd->exec($sql))
@@ -83,7 +83,7 @@ else
            disponível gratuitamente, que as ferramentas de software devem ser usadas pelas pessoas no
             idioma local e apesar de qualquer deficiência, e que as pessoas devem ter a liberdade de
         personalizar e altere o software da maneira que achar melhor.',
-        9.2
+        9.0
     )";
     
     if ($bd->exec($sql))
