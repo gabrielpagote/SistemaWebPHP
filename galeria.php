@@ -34,29 +34,40 @@ $sistemas = $bd->query($sql);
   </nav>
 
   <!-- Posters de sistemas operacionais-->
+  <div class="container">
 
-  <div class="row">
+    <div.container class="row">
 
-    <?php  while ($sistema = $sistemas-> fetchArray()) :?>
+      <?php while ($sistema = $sistemas->fetchArray()) : ?>
 
-      <div class="col s3">
-        <div class="card hoverable">
-          <div class="card-image">
-            <img src=<?= $sistema["poster"] ?>>
-            <a class="btn-floating halfway-fab waves-effect waves-light grey">
-              <i class="material-icons">favorite_border</i>
-            </a>
-          </div>
-          <div class="card-content">
-            <p class="valign-wrapper"><i class="material-icons amber-text">star</i><?= $sistema["nota"] ?></p>
-            <span class="card-title"><?= $sistema["titulo"] ?></span>
-            <p><?= $sistema["sinopse"] ?></p>
+        <div class="col s12 m2 l3">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img src=<?= $sistema["poster"] ?>>
+              <a class="btn-floating halfway-fab waves-effect waves-light grey">
+                <i class="material-icons">favorite_border</i>
+              </a>
+            </div>
+            <div class="card-content">
+              <p class="valign-wrapper"><i class="material-icons amber-text">star</i><?= $sistema["nota"] ?></p>
+              <span class="card-title"><?= $sistema["titulo"] ?></span>
+              <p><?= $sistema["sinopse"] ?></p>
+            </div>
           </div>
         </div>
-      </div>
-    <?php endwhile?>
+      <?php endwhile ?>
+  </div>
+
   </div>
 
 </body>
 
+<?php if (isset($_GET["msg"])) : ?>
+<script>
+  M.toast({
+    html : '<?= $_GET["msg"] ?>'
+
+  });
+</script>
+<?php endif ?>
 </html>

@@ -24,7 +24,7 @@ else
 
 $sql = "INSERT INTO opesis (titulo, poster, sinopse, nota) VALUES (
     'Fedora',
-    'https://fedoraproject.org/w/uploads/2/2d/Logo_fedoralogo.png',
+    'https://get.wallhere.com/photo/artwork-text-logo-Linux-open-source-circle-Fedora-Red-Hat-operating-system-brand-line-number-font-product-diagram-2785.jpg',
     'O Fedora (anteriormente Fedora Core) é uma distribuição Linux desenvolvida pelo Projeto Fedora,
      suportado pela comunidade, e de propriedade da Red Hat. O Fedora contém software distribuído sob
       uma licença livre e de código aberto e pretende estar na vanguarda de tais tecnologias.
