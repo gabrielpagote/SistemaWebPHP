@@ -1,11 +1,12 @@
 <?php
 
+$bd = new SQLite3("sistemas.db");
+
 $titulo     = $bd->escapeString($_POST["nome"]);
 $sinopse    = $bd->escapeString($_POST["sinopse"]);
 $nota       = $bd->escapeString($_POST["nota"]);
 $poster     = $bd->escapeString($_POST["poster"]);
 
-$bd = new SQLite3("sistemas.db");
 
 $sql = "INSERT INTO opesis (titulo, poster, sinopse, nota) 
 VALUES (:titulo, :poster, :sinopse, :nota)";
