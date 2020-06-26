@@ -25,7 +25,7 @@
     </nav>
 
     <div class="row">
-        <form action="inserirSistema.php" method="POST">
+        <form method="POST">
 
             <div class="col s6 offset-s3">
                 <div class="card">
@@ -59,18 +59,18 @@
                         </div>
 
                         <!-- Input Capa -->
-                            <div class="file-field input-field">
-                                <div class="btn grey darken-1 white-text">
-                                    <span>Adicionar Capa</span>
-                                    <input type="file">
-                                </div>
-                                <div class="file-path-wrapper">
-                                    <input name="poster" class="file-path validate" type="text">
-                                </div>
+                        <div class="file-field input-field">
+                            <div class="btn grey darken-1 white-text">
+                                <span>Adicionar Capa</span>
+                                <input type="file">
                             </div>
+                            <div class="file-path-wrapper">
+                                <input name="poster" class="file-path validate" type="text">
+                            </div>
+                        </div>
 
                         <div class="card-action">
-                            <a class="btn waves-effect waves-light grey" href="galeria.php">Cancelar</a>
+                            <a class="btn waves-effect waves-light grey" href="/">Cancelar</a>
                             <button type="submit" href="" class="waves-effect waves-light btn grey">Cadastrar</button>
                         </div>
                     </div>

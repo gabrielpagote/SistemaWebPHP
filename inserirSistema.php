@@ -1,25 +1,21 @@
 <?php
 
-$bd = new SQLite3("sistemas.db");
+session_start();
+require "./repository/SistemasRepositoryPDO.php";
+require"./model/sistema.php";
 
-$titulo     = $bd->escapeString($_POST["nome"]);
-$sinopse    = $bd->escapeString($_POST["sinopse"]);
-$nota       = $bd->escapeString($_POST["nota"]);
-$poster     = $bd->escapeString($_POST["poster"]);
+$sistemasRepository = new SistemasRepositoryPDO();
+$sistema = new Sistema();
 
 
-$sql = "INSERT INTO opesis (titulo, poster, sinopse, nota) 
-VALUES (:titulo, :poster, :sinopse, :nota)";
+$sistema->titulo     = $_POST["nome"];
+$sistema->sinopse    = $_POST["sinopse"];
+$sistema->nota       = $_POST["nota"];
+$sistema->poster     = $_POST["poster"];
 
-$stmt = $bd->prepare($sql);
-$stmt ->bindValue(':titulo', $titulo, SQLITE3_TEXT);
-$stmt ->bindValue(':sinopse', $sinopse, SQLITE3_TEXT);
-$stmt ->bindValue(':nota', $nota, SQLITE3_FLOAT);
-$stmt ->bindValue(':poster', $poster, SQLITE3_TEXT);
-
-if ($stmt->execute())
-    echo "\nTabela de sistemas criada\n";
+if($sistemasRepository->salvar($sistema))
+    $_SESSION["msg"] = "Filme cadastrado com sucesso";
 else
-    echo "\nErro ao criar tabela de sistemas\n" . $bd-> lastErrorMsg();
-
-    header("Location: galeria.php?msg=Sistema+Operacional+cadastrado+com+sucesso");
+    echo "\n falha ao inserir sistemas\n";
+    
+    header("Location: /");

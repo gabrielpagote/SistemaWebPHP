@@ -2,10 +2,12 @@
 
 <?php
 
-$bd = new SQLite3("sistemas.db");
-$sql = "SELECT * FROM opesis";
-$sistemas = $bd->query($sql);
+session_start();
+require "./repository/SistemasRepositoryPDO.php";
+require "./util/Mensagem.php";
 
+$sistemasRepository = new SistemasRepositoryPDO();
+$sistema = $sistemasRepository->listarTodos();
 
 ?>
 
@@ -16,9 +18,9 @@ $sistemas = $bd->query($sql);
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="right">
         <li class="active">
-          <a href="galeria.php">Galeria</a></li>
+          <a href="/">Galeria</a></li>
         <li>
-          <a href="cadastrar.php">Cadastrar</a></li>
+          <a href="/novo">Cadastrar</a></li>
       </ul>
     </div>
     <div class="nav-header center">
@@ -38,36 +40,31 @@ $sistemas = $bd->query($sql);
 
     <div.container class="row">
 
-      <?php while ($sistema = $sistemas->fetchArray()) : ?>
+      <?php foreach ($sistemas as $sistema) : ?>
 
         <div class="col s12 m2 l3">
           <div class="card hoverable">
             <div class="card-image">
-              <img src=<?= $sistema["poster"] ?>>
+              <img src=<?= $sistema->poster ?>>
               <a class="btn-floating halfway-fab waves-effect waves-light grey">
                 <i class="material-icons">favorite_border</i>
               </a>
             </div>
             <div class="card-content">
-              <p class="valign-wrapper"><i class="material-icons amber-text">star</i><?= $sistema["nota"] ?></p>
-              <span class="card-title"><?= $sistema["titulo"] ?></span>
-              <p><?= $sistema["sinopse"] ?></p>
+              <p class="valign-wrapper"><i class="material-icons amber-text">star</i>
+                <?= $sistema->nota ?></p>
+              <span class="card-title"><?= $sistema->titulo ?></span>
+              <p><?= $sistema->sinopse ?></p>
             </div>
           </div>
         </div>
-      <?php endwhile ?>
+      <?php endforeach ?>
   </div>
 
   </div>
+
+  <?= Mensagem::mostrar(); ?>
 
 </body>
 
-<?php if (isset($_GET["msg"])) : ?>
-<script>
-  M.toast({
-    html : '<?= $_GET["msg"] ?>'
-
-  });
-</script>
-<?php endif ?>
 </html>
