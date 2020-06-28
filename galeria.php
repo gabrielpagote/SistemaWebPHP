@@ -40,21 +40,21 @@ $sistema = $sistemasRepository->listarTodos();
 
     <div.container class="row">
 
-      <?php foreach ($sistemas as $sistema) : ?>
+      <?php foreach ($sistema as $sistemas) : ?>
 
         <div class="col s12 m2 l3">
           <div class="card hoverable">
             <div class="card-image">
-              <img src=<?= $sistema->poster ?>>
+              <img src=<?= $sistemas->poster ?>>
               <a class="btn-floating halfway-fab waves-effect waves-light grey">
                 <i class="material-icons">favorite_border</i>
               </a>
             </div>
             <div class="card-content">
               <p class="valign-wrapper"><i class="material-icons amber-text">star</i>
-                <?= $sistema->nota ?></p>
-              <span class="card-title"><?= $sistema->titulo ?></span>
-              <p><?= $sistema->sinopse ?></p>
+                <?= $sistemas->nota ?></p>
+              <span class="card-title"><?= $sistemas->titulo ?></span>
+              <p><?= $sistemas->sinopse ?></p>
             </div>
           </div>
         </div>

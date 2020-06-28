@@ -11,7 +11,6 @@ class SistemasRepositoryPDO
     }
 
     public function listarTodos(): array{
-        $bd = Conexao::criar();
         $sistemasLista = array();
 
         $sql = "SELECT * FROM opesis";
