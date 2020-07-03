@@ -21,7 +21,7 @@ class SistemasRepositoryPDO
         return $sistemasLista;
     }
 
-    public function salvar(Sistema $sistema): bool
+    public function salvar($sistema): bool
     {
 
 

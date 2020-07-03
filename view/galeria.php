@@ -3,11 +3,11 @@
 <?php
 
 session_start();
-require "./repository/SistemasRepositoryPDO.php";
+//require "./repository/SistemasRepositoryPDO.php";
 require "./util/Mensagem.php";
 
-$sistemasRepository = new SistemasRepositoryPDO();
-$sistema = $sistemasRepository->listarTodos();
+$controller = new SistemasController();
+$sistema = $controller->index();
 
 ?>
 

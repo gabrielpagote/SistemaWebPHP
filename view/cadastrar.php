@@ -25,12 +25,12 @@
     </nav>
 
     <div class="row">
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
 
             <div class="col s6 offset-s3">
                 <div class="card">
                     <div class="card-content">
-                        <span class="card-title">Cadastrar Filme</span>
+                        <span class="card-title">Cadastrar Sistema</span>
 
                         <!-- Input Título -->
                         <div class="row">
@@ -62,10 +62,10 @@
                         <div class="file-field input-field">
                             <div class="btn grey darken-1 white-text">
                                 <span>Adicionar Capa</span>
-                                <input type="file">
+                                <input type="file" name="poster_file">
                             </div>
                             <div class="file-path-wrapper">
-                                <input name="poster" class="file-path validate" type="text">
+                                <input name="poster" class="file-path validate" type="text" name="poster">
                             </div>
                         </div>
 
