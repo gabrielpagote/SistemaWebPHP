@@ -9,11 +9,11 @@ class Mensagem
             $msg = $_SESSION["msg"];
             unset($_SESSION["msg"]);
             return "<script>
-        M.toast({
-            html: '$msg'
-        });
-        </script>
-        ";
+                    M.toast({
+                        html: '$msg'
+                    });
+                  </script>
+            ";
         }
     }
 }
