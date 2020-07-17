@@ -11,7 +11,7 @@ $sistemas = $controller->index();
 <body>
 
   <!-- Cabeçalho-->
-  <nav class="nav-extended gray lighten-3">
+  <nav class="nav-extended transparent">
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="right">
         <li class="active"><a href="/">Galeria</a></li>
@@ -19,13 +19,13 @@ $sistemas = $controller->index();
       </ul>
     </div>
     <div class="nav-header center">
-      <h1>URANIUM</h1>
+      <h1>Uranium Systems</h1>
     </div>
     <div class="nav-content">
-      <ul class="tabs tabs-transparent gray darken-1">
-        <li class="tab"><a class="active" href="#test1">Todos</a></li>
-        <li class="tab"><a href="#test2">Assistidos</a></li>
-        <li class="tab"><a href="#test3">Favoritos</a></li>
+      <ul class="tabs tabs-transparent grey lighten-2">
+        <li class="tab"><a class="active grey-text" href="#test1">Todos</a></li>
+        <li class="tab"><a class="grey-text"href="#test2">Assistidos</a></li>
+        <li class="tab"><a class="grey-text"href="#test3">Favoritos</a></li>
       </ul>
     </div>
   </nav>
@@ -35,14 +35,14 @@ $sistemas = $controller->index();
   <div class="container">
     <div class="row">
 
-      <?php if (!$sistemas) echo "<p class='card-panel gray lighten-4'>Nenhum sistema operacional cadastrado</p>" ?>
+      <?php if (!$sistemas) echo "<p class='card-panel grey lighten-4'>Nenhum sistema operacional cadastrado</p>" ?>
 
       <?php foreach ($sistemas as $sistema) : ?>
         <div class="col s12 m6 l3">
           <div class="card hoverable">
             <div class="card-image">
               <img src="<?= $sistema->poster ?>">
-              <button class="btn-fav btn-floating halfway-fab waves-effect waves-light gray" data-id="<?= $sistema->id ?>">
+              <button class="btn-fav btn-floating halfway-fab waves-effect waves-light grey" data-id="<?= $sistema->id ?>">
                 <i class="material-icons"><?= ($sistema->favorito) ? "favorite" : "favorite_border" ?></i>
               </button>
             </div>

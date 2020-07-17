@@ -2,7 +2,7 @@
 
 <body>
 
-  <nav class="nav-extended gray lighten-3">
+  <nav class="nav-extended transparent">
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="right">
         <li><a href="/">Galeria</a></li>
@@ -49,7 +49,7 @@
 
             <!-- input capa -->
             <div class="file-field input-field">
-              <div class="btn gray lighten-2 black-text">
+              <div class="btn grey darken-2 white-text">
                 <span>Capa</span>
                 <input type="file" name="poster_file" accept="image/*">
               </div>
@@ -60,7 +60,7 @@
 
             <div class="card-action">
               <a class="btn waves-effect waves-light grey" href="/">Cancelar</a>
-              <button type="submit" class="waves-effect waves-light btn gray">Confirmar</button>
+              <button type="submit" class="waves-effect waves-light btn grey">Confirmar</button>
             </div>
           </div>
         </div>
