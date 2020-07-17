@@ -6,7 +6,7 @@ $metodo = $_SERVER["REQUEST_METHOD"];
 require "./controller/SistemasController.php";
 
 if ($rota === "/") {
-    require "view/first.php";
+    require "view/galeria.php";
     exit();
 }
     
