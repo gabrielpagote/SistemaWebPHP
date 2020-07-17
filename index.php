@@ -5,21 +5,22 @@ $metodo = $_SERVER["REQUEST_METHOD"];
 
 require "./controller/SistemasController.php";
 
-switch ($rota) {
-    case "/":
-        require "view/galeria.php";
-        break;
+if ($rota === "/") {
+    require "view/first.php";
+    exit();
+}
+    
+if($rota ==="/novo"){
+if($metodo == "GET")require "view/lista.php";
+if ($metodo =="POST") {
+    $controller = new SistemasController();
+    $controller->save($_REQUEST);
+    };
+exit();
+}
+ if(substr($rota, 0,strlen("/favoritar")) === "/favoritar"){
+        $controller= new SistemasController();
+        $controller->favorite(basename($rota));
 
-    case "/novo":
-        if ($metodo == "GET") require "view/cadastrar.php";
-        if ($metodo == "POST") {
-            $controller = new SistemasController();
-            $controller->save($_REQUEST);
-        };
-
-        break;
-
-    default:
-        require "view/404.php";
-        break;
+   exit();
 }
