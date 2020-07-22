@@ -11,7 +11,7 @@ if ($rota === "/") {
 }
     
 if($rota ==="/novo"){
-if($metodo == "GET")require "view/lista.php";
+if($metodo == "GET")require "view/cadastrar.php";
 if ($metodo =="POST") {
     $controller = new SistemasController();
     $controller->save($_REQUEST);
