@@ -1,7 +1,7 @@
 <?php
 require "./repository/SistemasRepositoryPDO.php";
 require "./model/Sistema.php";
-
+require "./util/SimpleImage.php";
 
 class SistemasController{
 
