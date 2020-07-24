@@ -18,9 +18,21 @@ if ($metodo =="POST") {
     };
 exit();
 }
- if(substr($rota, 0,strlen("/favoritar")) === "/favoritar"){
-        $controller= new SistemasController();
-        $controller->favorite(basename($rota));
 
-   exit();
+if (substr($rota, 0, strlen("/favoritar")) === "/favoritar") {
+    $controller = new SistemasController();
+    $controller->favorite(basename($rota));
+    exit();
+
 }
+
+if (substr($rota, 0, strlen("/sistemas")) === "/sistemas") {
+    if($metodo == "GET")require "view/galeria.php";
+    if($metodo == "DELETE"){
+        $controller = new SistemasController();
+        $controller->delete(basename($rota));
+    }
+
+    exit();
+}
+require "view/404.php";

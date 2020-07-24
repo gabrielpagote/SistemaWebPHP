@@ -51,4 +51,11 @@ class SistemasController{
         header('Content-type: application/json');
         echo json_encode($result);
     }
+
+    public function delete(int $id){
+        $sistemasRepository = new SistemasRepositoryPDO();
+        $result = ['success' => $sistemasRepository->delete($id)];
+        header('Content-type: application/json');
+        echo json_encode($result);
+    }
 }
