@@ -1,61 +1,57 @@
 <?php
-
-session_start();
 require "./repository/SistemasRepositoryPDO.php";
-require "./model/Sistema.php";
-require "./util/SimpleImage.php";
+require "./model/sistema.php";
+
 
 class SistemasController{
+
+  public function index(){
+  $istemasRepository = new SistemasRepositoryPDO();
+  return $sistemasRepository->listarTodos();
+
+}
+  public function save($request){
     
-    public function index(){
-        $sistemasRepository = new SistemasRepositoryPDO();
-        return $sistemasRepository->listarTodos();
-    }
+$sistemasRepository= new SistemasRepositoryPDO();
+$sistema = (object) $request;
 
-    public function save($request){
+$upload= $this->savePoster($_FILES);
 
-        $sistemasRepository = new SistemasRepositoryPDO();
-        $sistema = (object) $request;
+if(gettype ($upload)=="string"){
+  $sistema->poster = $upload;
+}
 
-        $upload = $this->savePoster($_FILES);
+if($sistemas->salvar($sistema))
+  $_SESSION["msg"] = "Sistema operacional cadastrado com sucesso";
+else 
+$_SESSION["msg"] ="Erro ao inserir sistema";
+   
+header("Location: / ");
 
-        if(gettype($upload)=="string"){
-            $sistema->poster = $upload;
-        }
-        
-        if ($sistemasRepository->salvar($sistema)) 
-                $_SESSION["msg"] = "Sistema cadastrado com sucesso";
-        else 
-                $_SESSION["msg"] = "Erro ao cadastrar sistema";
-        
-        header("Location: /");
-        
-    }
+}
+private function savePoster($file){
+  $posterDir = "imagem/posters/";
+  $posterPath = $posterDir . basename($file["poster_file"]["name"]);
+  $posterTmp = $file["poster_file"]["tmp_name"];
+ if (move_uploaded_file($posterTmp, $posterPath)){
+    return $posterPath;
+} else {
+    return false;
+}
+  }
 
-    private function savePoster($file){
-        $posterDir = "imagens/posters/";
-        $posterPath = $posterDir . basename($file["poster_file"]["name"]);
-        $posterTmp = $file["poster_file"]["tmp_name"];
+  public function favorite(int $id){
+    $sistemasRepository = new SistemasRepositoryPDO();
+    $result=['success'=>$sistemasRepository->favoritar($id)];
+    header('Content-type:application/json');
+   echo json_encode($result);
+  }
+  public function delete(int $id){
+    $sistemasRepository = new SistemasRepositoryPDO();
+    $result=['success'=>$sistemasRepository->delete($id)];
+       header('Content-type:application/json');
+   echo json_encode($result);
+  }
 
-        $image = new SimpleImage();
-        $image->load($posterTmp);
-        $image->resize(200, 300);
-        $image->save($posterPath);
-        return $posterPath;
 
-    }
-
-    public function favorite(int $id){
-        $sistemasRepository = new SistemasRepositoryPDO();
-        $result = ['success' => $sistemasRepository->favoritar($id)];
-        header('Content-type: application/json');
-        echo json_encode($result);
-    }
-
-    public function delete(int $id){
-        $sistemasRepository = new SistemasRepositoryPDO();
-        $result = ['success' => $sistemasRepository->delete($id)];
-        header('Content-type: application/json');
-        echo json_encode($result);
-    }
 }
