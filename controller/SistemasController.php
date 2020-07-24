@@ -1,6 +1,6 @@
 <?php
 require "./repository/SistemasRepositoryPDO.php";
-require "./model/sistema.php";
+require "./model/Sistema.php";
 
 
 class SistemasController{
